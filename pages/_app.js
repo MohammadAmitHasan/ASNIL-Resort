@@ -5,7 +5,9 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return <>
     <Navbar />
-    <Component {...pageProps} />
+    <div className='mt-14'>
+      <Component {...pageProps} />
+    </div>
     <Footer />
   </>
 }

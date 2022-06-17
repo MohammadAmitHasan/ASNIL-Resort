@@ -8,7 +8,7 @@ import Welcome from '../Components/welcome'
 
 export default function Home() {
   return (
-    <div className='mt-14'>
+    <div>
       <Banner />
       <Welcome />
       <Features />
