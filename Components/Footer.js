@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '../public/images/ASNIL-Logo.png'
 const Footer = () => {
     return (
-        <div className='p-10 bg-zinc-800 mt-10 text-white'>
+        <div className='p-10 bg-zinc-800 mt-10 text-white mt-24'>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 container mx-auto mb-5'>
                 <div className='lg:col-span-2 flex items-center justify-center md:justify-start'>
                     <div className='w-20'>
