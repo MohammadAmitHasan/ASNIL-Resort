@@ -2,11 +2,13 @@ import { useState } from 'react';
 import Image from 'next/image'
 import logo from '../public/images/ASNIL-Logo.png'
 import Link from 'next/link'
+import Login from './Login';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [openLogin, setOpenLogin] = useState(false)
     return (
-        <nav className='py-1 bg-zinc-800 flex items-center mx-auto fixed top-0 z-50 w-full px-10 h-14'>
+        <nav className=' py-1 bg-zinc-800 flex items-center mx-auto fixed top-0 z-50 w-full px-10 h-14'>
             <div className='flex w-[60px]'>
                 <Image src={logo} alt='company logo' />
             </div>
@@ -22,7 +24,11 @@ const Navbar = () => {
 
                 <Link href={'/contact'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CONTACT US</a></Link>
 
-                <a className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
+                <a onClick={() => setOpenLogin(!openLogin)} className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
+                {console.log(openLogin)}
+                <div className={openLogin ? `block` : `hidden`}>
+                    <Login setOpenLogin={setOpenLogin} openLogin={openLogin} />
+                </div>
             </ul>
         </nav>
 

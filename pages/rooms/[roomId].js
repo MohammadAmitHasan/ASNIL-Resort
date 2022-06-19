@@ -5,7 +5,6 @@ import HomeLayout from '../../Layouts/HomeLayout'
 function Room({ room }) {
     const router = useRouter()
 
-    console.log(router.isFallback)
     if (router.isFallback) {
         console.log(router.isFallback)
         return <div className='text-5xl text-center mt-10'>Loading...</div>
@@ -26,7 +25,7 @@ export async function getStaticProps(context) {
     const { params } = context;
 
     const response = await fetch(
-        `http://localhost:4000/rooms/${params.roomId}`
+        `http://localhost:3000/api/rooms/${params.roomId}`
     )
     const data = await response.json()
 
