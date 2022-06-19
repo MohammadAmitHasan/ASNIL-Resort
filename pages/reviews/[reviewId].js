@@ -1,17 +1,19 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Review from "../../Components/Review";
 import HomeLayout from "../../Layouts/HomeLayout";
 
 const SingleReview = ({ review }) => {
 
     const router = useRouter()
+
     const deleteHandler = async () => {
         const response = await fetch(`/api/reviews/${review.id}`, {
             method: 'DELETE'
         })
-        const data = await response.json()
         router.replace('/reviews')
     }
+
 
     return <div>
         <HomeLayout>
@@ -23,9 +25,10 @@ const SingleReview = ({ review }) => {
         </HomeLayout>
     </div>;
 };
-export default SingleReview;
 
-export async function getStaticProps(context) {
+export default SingleReview
+
+export async function getServerSideProps(context) {
     const { params } = context
     const { reviewId } = params
     const response = await fetch(`http://localhost:3000/api/reviews/${reviewId}`)
@@ -35,12 +38,5 @@ export async function getStaticProps(context) {
         props: {
             review: data
         }
-    }
-}
-
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: 'blocking'
     }
 }
