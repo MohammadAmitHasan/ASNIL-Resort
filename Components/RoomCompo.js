@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RoomCompo = ({ room }) => {
-    console.log(room)
+
     const { id, img, title, description, price } = room;
 
     return <div className="shadow-lg p-5 rounded-lg max-w-lg mx-auto">

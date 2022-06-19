@@ -18,7 +18,7 @@ const Navbar = () => {
 
                 <Link href={'/rooms'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>ROOMS</a></Link>
 
-                <Link href={'/book'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>BOOK NOW</a></Link>
+                <Link href={'/reviews'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>REVIEWS</a></Link>
 
                 <Link href={'/contact'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CONTACT US</a></Link>
 

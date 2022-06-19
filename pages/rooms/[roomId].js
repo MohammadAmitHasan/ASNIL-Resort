@@ -1,16 +1,22 @@
 import { useRouter } from 'next/router'
 import RoomCompo from '../../Components/RoomCompo'
+import HomeLayout from '../../Layouts/HomeLayout'
 
 function Room({ room }) {
     const router = useRouter()
 
+    console.log(router.isFallback)
     if (router.isFallback) {
-        return <div>Loading...</div>
+        console.log(router.isFallback)
+        return <div className='text-5xl text-center mt-10'>Loading...</div>
     }
+
     return (
-        <div>
-            <RoomCompo room={room} />
-        </div>
+        <HomeLayout>
+            <div>
+                <RoomCompo room={room} />
+            </div>
+        </HomeLayout>
     )
 }
 

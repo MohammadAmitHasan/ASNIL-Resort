@@ -4,11 +4,9 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return <>
-    <Navbar />
-    <div className='mt-14'>
-      <Component {...pageProps} />
-    </div>
-    <Footer />
+
+    <Component {...pageProps} />
+
   </>
 }
 
