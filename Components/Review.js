@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const Review = ({ review }) => {
-    console.log(review)
     return <>
         <Link href={`/reviews/${review.id}`}>
             <a>
