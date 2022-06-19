@@ -2,8 +2,9 @@ import Link from "next/link";
 
 const RoomsCount = () => {
     return <div className="container mx-auto mt-20 p-5">
-        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10 text-slate-800">Comfortable Rooms</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center mb-5 text-slate-800">Comfortable Rooms</h2>
+        <hr className="w-28 mx-auto h-1 bg-rose-500" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             <div className="flex justify-center md:justify-end items-center">
                 <div>
                     <img className="rounded-lg" src="/images/Banner/office-reception.png" alt="Office" />

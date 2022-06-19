@@ -1,5 +1,5 @@
 const TwoLayer = ({ imgSrc, features, titleText }) => {
-    return <div>
+    return <div className="mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="flex justify-end items-center">
                 <div>

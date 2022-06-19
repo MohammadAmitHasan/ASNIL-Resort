@@ -3,10 +3,11 @@ import Link from "next/link";
 const FoodOffers = () => {
 
     return <div className="container mx-auto mt-20 px-5">
-        <h1 className="text-3xl md:text-5xl font-semibold text-center mb-10 text-slate-800">We Offer Buffet</h1>
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <h1 className="text-3xl md:text-5xl font-semibold text-center mb-5 text-slate-800">We Offer Buffet</h1>
+        <hr className="w-28 mx-auto h-1 bg-rose-500" />
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 ">
 
-            <div className="flex justify-center md:justify-end items-center text-right">
+            <div className="flex justify-center md:justify-end items-center text-center md:text-right order-2 md:order-1">
                 <div>
                     <h3 className="text-3xl font-semibold text-rose-500 mb-5">Get foods you much as you like</h3>
 
@@ -20,7 +21,7 @@ const FoodOffers = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center">
+            <div className="flex justify-center md:justify-start items-center order-1 md:order-2">
                 <div>
                     <img className="rounded-lg shadow-lg" src="/images/banquet-table-with-snacks_144627-18361.webp" alt="foods in a table" />
                 </div>
