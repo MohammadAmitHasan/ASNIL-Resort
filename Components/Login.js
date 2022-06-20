@@ -1,10 +1,10 @@
-import { BeakerIcon, XIcon } from '@heroicons/react/solid'
+import { XIcon } from '@heroicons/react/solid'
 
 const Login = ({ setOpenLogin, openLogin }) => {
     return <div className="absolute w-screen left-0 top-14 h-screen bg-[#000000e6] flex justify-center items-center">
         <div className="max-w-md absolute -mt-14 bg-white rounded-lg">
 
-            <div className="relative pt-10 pb-5 p-5">
+            <div className="relative pt-10 pb-5 px-5">
                 <h1 className="text-4xl text-rose-600 font-semibold mb-5">Login</h1>
                 <div>
                     <input type="email" placeholder="Your Email" className="border-2 border-slate-800 px-2 py-1 text-lg rounded-lg w-full" />

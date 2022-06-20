@@ -22,10 +22,10 @@ const Navbar = () => {
 
                 <Link href={'/reviews'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>REVIEWS</a></Link>
 
-                <Link href={'/contact'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CONTACT US</a></Link>
+                <Link href={'/catchAll'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CONTACT US</a></Link>
 
                 <a onClick={() => setOpenLogin(!openLogin)} className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
-                {console.log(openLogin)}
+
                 <div className={openLogin ? `block` : `hidden`}>
                     <Login setOpenLogin={setOpenLogin} openLogin={openLogin} />
                 </div>

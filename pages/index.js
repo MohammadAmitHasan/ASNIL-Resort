@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../Components/Banner'
+import ContactUs from '../Components/ContactUs'
 import Features from '../Components/Features'
 import FoodOffers from '../Components/FoodOffers'
 import RoomsCount from '../Components/RoomsCount'
@@ -18,6 +19,7 @@ export default function Home() {
         <RoomsCount />
         <FoodOffers />
         <Features />
+        <ContactUs />
       </HomeLayout>
     </div>
   )
