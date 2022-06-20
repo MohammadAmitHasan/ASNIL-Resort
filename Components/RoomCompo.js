@@ -15,9 +15,11 @@ const RoomCompo = ({ room }) => {
             <h2 className="my-2 text-2xl font-semibold">Price: {price} Tk</h2>
             <p className="text-lg text-gray-700">{description}</p>
 
-            <Link href={`/rooms/${id}`}>
-                <button className="text-white px-3 py-2 bg-rose-500 rounded-lg mt-3 hover:bg-rose-600">Book Now</button>
-            </Link>
+            <div className="mt-5">
+                <Link href={`/rooms/${id}`} passHref>
+                    <a className="text-white px-3 py-2 bg-rose-500 rounded-lg mt-3 hover:bg-rose-600">Book Now</a>
+                </Link>
+            </div>
         </div>
     </div>;
 };

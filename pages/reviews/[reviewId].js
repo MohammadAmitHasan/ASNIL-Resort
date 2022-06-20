@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import Review from "../../Components/Review";
 import HomeLayout from "../../Layouts/HomeLayout";
+import { server } from '../../config/index'
 
 const SingleReview = ({ review }) => {
 
@@ -31,7 +31,7 @@ export default SingleReview
 export async function getServerSideProps(context) {
     const { params } = context
     const { reviewId } = params
-    const response = await fetch(`http://localhost:3000/api/reviews/${reviewId}`)
+    const response = await fetch(`http://localhost:4000/reviews/${reviewId}`)
     const data = await response.json()
 
     return {

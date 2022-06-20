@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HomeLayout from '../../Layouts/HomeLayout'
-import useSWR from 'swr'
 import Review from "../../Components/Review";
+import { server } from '../../config/index'
 
 const Reviews = ({ reviews }) => {
 
@@ -10,13 +10,13 @@ const Reviews = ({ reviews }) => {
     const [user, setUser] = useState('')
 
     const fetchReviews = async () => {
-        const response = await fetch('/api/reviews')
+        const response = await fetch(`http://localhost:4000/reviews`)
         const data = await response.json()
         setAllReviews(data)
     }
 
     const submitReview = async () => {
-        const response = await fetch('/api/reviews', {
+        const response = await fetch(`http://localhost:4000/reviews`, {
             method: 'POST',
             body: JSON.stringify({ user, review }),
             headers: {
@@ -71,7 +71,7 @@ const Reviews = ({ reviews }) => {
 export default Reviews;
 
 export async function getServerSideProps() {
-    const response = await fetch(`http://localhost:3000/api/reviews`)
+    const response = await fetch(`http://localhost:4000/reviews`)
     const data = await response.json()
 
     return {

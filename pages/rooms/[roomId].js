@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import RoomCompo from '../../Components/RoomCompo'
 import HomeLayout from '../../Layouts/HomeLayout'
+import { server } from '../../config/index'
 
 function Room({ room }) {
     const router = useRouter()
@@ -21,11 +22,12 @@ function Room({ room }) {
 
 export default Room
 
+
 export async function getStaticProps(context) {
     const { params } = context;
 
     const response = await fetch(
-        `http://localhost:3000/api/rooms/${params.roomId}`
+        `http://localhost:4000/rooms/${params.roomId}`
     )
     const data = await response.json()
 
@@ -38,6 +40,10 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+
+    const response = await fetch(`http://localhost:4000/rooms`)
+    const data = await response.json()
+
     return {
         paths: [
             {

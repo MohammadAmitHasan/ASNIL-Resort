@@ -1,5 +1,6 @@
 import RoomCompo from "../../Components/RoomCompo";
 import HomeLayout from "../../Layouts/HomeLayout";
+import { server } from '../../config/index'
 
 const Rooms = ({ rooms }) => {
     return <>
@@ -9,7 +10,7 @@ const Rooms = ({ rooms }) => {
 
                 <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
                     {
-                        rooms.map(room => <RoomCompo key={room.id} room={room} />)
+                        rooms?.map(room => <RoomCompo key={room?.id} room={room} />)
                     }
                 </div>
             </div>
@@ -20,7 +21,7 @@ export default Rooms;
 
 
 export async function getStaticProps() {
-    const response = await fetch('http://localhost:3000/api/rooms')
+    const response = await fetch(`http://localhost:4000/rooms`)
     const data = await response.json()
 
     return {
