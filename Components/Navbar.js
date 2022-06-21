@@ -3,10 +3,17 @@ import Image from 'next/image'
 import logo from '../public/images/ASNIL-Logo.png'
 import Link from 'next/link'
 import Login from './Login';
+import { useDispatch, useSelector } from "react-redux";
+import { change } from '../store/openLogin';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const [openLogin, setOpenLogin] = useState(false)
+
+    // const [openLogin, setOpenLogin] = useState(false)
+
+    const dispatch = useDispatch()
+    const openLogin = useSelector(state => state.loginForm.value)
+
     return (
         <nav className=' py-1 bg-zinc-800 flex items-center mx-auto fixed top-0 z-50 w-full px-10 h-14'>
             <div className='flex w-[60px]'>
@@ -24,10 +31,11 @@ const Navbar = () => {
 
                 <Link href={'/catchAll'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CATCH ALL</a></Link>
 
-                <a onClick={() => setOpenLogin(!openLogin)} className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
+                <a onClick={() => dispatch(change())} className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
 
-                <div className={openLogin ? `block` : `hidden`}>
-                    <Login setOpenLogin={setOpenLogin} openLogin={openLogin} />
+                <div className={`ease-in-out duration-500 absolute left-0 ${openLogin ? `top-0` : `top-[-1500px]`} `}>
+                    {/* <Login setOpenLogin={setOpenLogin} openLogin={openLogin} /> */}
+                    <Login />
                 </div>
             </ul>
         </nav>
