@@ -1,4 +1,4 @@
-// import { rooms } from "../../../Data/rooms"
+// import { rooms } from "Data/rooms"
 
 const rooms = [
     {

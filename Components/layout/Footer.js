@@ -1,6 +1,6 @@
 import { DeviceMobileIcon, MailIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
-import logo from '../public/images/ASNIL-Logo.png'
+import logo from 'public/images/ASNIL-Logo.png'
 const Footer = () => {
     return (
         <div className='p-10 bg-zinc-800 mt-10 text-white mt-24'>

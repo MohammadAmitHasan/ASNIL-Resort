@@ -1,6 +1,6 @@
 import { XIcon } from '@heroicons/react/solid'
 import { useDispatch, useSelector } from "react-redux";
-import { change } from '../store/openLogin';
+import { change } from 'store/openLogin';
 
 // const Login = ({ setOpenLogin, openLogin }) => {
 const Login = () => {

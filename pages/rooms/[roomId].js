@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import RoomCompo from '../../Components/RoomCompo'
-import HomeLayout from '../../Layouts/HomeLayout'
-import { server } from '../../config/index'
+import RoomCompo from 'Components/RoomCompo'
+import HomeLayout from 'Layouts/HomeLayout'
+import { server } from 'config/index'
 
 function Room({ room }) {
     const router = useRouter()

@@ -1,4 +1,4 @@
-import { reviews } from "../../../Data/review"
+import { reviews } from "Data/review"
 
 export default function handler(req, res) {
     const { reviewId } = req.query

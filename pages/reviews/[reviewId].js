@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import Review from "../../Components/Review";
-import HomeLayout from "../../Layouts/HomeLayout";
-import { server } from '../../config/index'
+import Review from "Components/Review";
+import HomeLayout from "Layouts/HomeLayout";
+import { server } from 'config/index'
 
 const SingleReview = ({ review }) => {
 

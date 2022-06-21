@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "Layouts/HomeLayout";
 
 const CatchAll = () => {
     const router = useRouter()

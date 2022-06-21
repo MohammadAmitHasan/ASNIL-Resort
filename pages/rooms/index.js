@@ -1,6 +1,6 @@
-import RoomCompo from "../../Components/RoomCompo";
-import HomeLayout from "../../Layouts/HomeLayout";
-import { server } from '../../config/index'
+import RoomCompo from "Components/RoomCompo";
+import HomeLayout from "Layouts/HomeLayout";
+import { server } from 'config/index'
 
 const Rooms = ({ rooms }) => {
     return <>

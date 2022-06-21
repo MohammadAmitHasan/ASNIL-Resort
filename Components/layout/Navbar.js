@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Image from 'next/image'
-import logo from '../public/images/ASNIL-Logo.png'
+import logo from 'public/images/ASNIL-Logo.png'
 import Link from 'next/link'
-import Login from './Login';
+
 import { useDispatch, useSelector } from "react-redux";
-import { change } from '../store/openLogin';
+import { change } from 'store/openLogin';
+import Login from 'Components/Login';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -31,7 +32,11 @@ const Navbar = () => {
 
                 <Link href={'/catchAll'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>CATCH ALL</a></Link>
 
+                <Link href={'/api/preview?redirect=/news'}><a className='text-white font-semibold block mx-5 hover:bg-rose-500 rounded-lg px-3 py-2'>PREVIEW</a></Link>
+
                 <a onClick={() => dispatch(change())} className='text-green-400 font-semibold block mx-5 hover:bg-green-700 hover:text-white rounded-lg px-3 py-2'>LOGIN</a>
+
+                <a onClick={() => dispatch(change())} className='text-red-400 font-semibold block mx-5 hover:bg-red-700 hover:text-white rounded-lg px-3 py-2'>LOGOUT</a>
 
                 <div className={`ease-in-out duration-500 absolute left-0 ${openLogin ? `top-0` : `top-[-1500px]`} `}>
                     {/* <Login setOpenLogin={setOpenLogin} openLogin={openLogin} /> */}

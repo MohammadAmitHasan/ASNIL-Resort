@@ -1,7 +1,7 @@
-import HomeLayout from "../Layouts/HomeLayout";
+import HomeLayout from "Layouts/HomeLayout";
 import { useDispatch, useSelector } from "react-redux";
 import useSWR from 'swr'
-import { getPosts } from "../store/loadPost";
+import { getPosts } from "store/loadPost";
 import { useEffect } from "react";
 
 const Thunk = () => {

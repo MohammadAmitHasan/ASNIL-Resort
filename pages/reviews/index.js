@@ -1,7 +1,7 @@
 import { useState } from "react";
-import HomeLayout from '../../Layouts/HomeLayout'
-import Review from "../../Components/Review";
-import { server } from '../../config/index'
+import HomeLayout from 'Layouts/HomeLayout'
+import Review from "Components/Review";
+import { server } from 'config/index'
 
 const Reviews = ({ reviews }) => {
 

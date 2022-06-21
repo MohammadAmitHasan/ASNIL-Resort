@@ -1,6 +1,6 @@
-import HomeLayout from "../Layouts/HomeLayout";
+import HomeLayout from "Layouts/HomeLayout";
 import useSWR from 'swr'
-import FoodItem from "../Components/FoodItem";
+import FoodItem from "Components/FoodItem";
 
 const FoodItems = () => {
 

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../store/counterSlice";
-import HomeLayout from "../Layouts/HomeLayout";
+import { increment, decrement } from "store/counterSlice";
+import HomeLayout from "Layouts/HomeLayout";
 
 
 const Redux = () => {
