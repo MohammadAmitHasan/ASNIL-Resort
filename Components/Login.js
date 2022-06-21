@@ -6,7 +6,7 @@ import { change } from '../store/openLogin';
 const Login = () => {
 
     const dispatch = useDispatch()
-    const openLogin = useSelector(state => state.loginForm.value)
+    const openLogin = useSelector(state => state.openLogin.value)
 
     return <div className="absolute w-screen left-0 top-14 h-screen bg-[#000000e6] flex justify-center items-center">
         <div className="max-w-md absolute -mt-14 bg-white rounded-lg">

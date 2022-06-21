@@ -12,7 +12,7 @@ const Navbar = () => {
     // const [openLogin, setOpenLogin] = useState(false)
 
     const dispatch = useDispatch()
-    const openLogin = useSelector(state => state.loginForm.value)
+    const openLogin = useSelector(state => state.openLogin.value)
 
     return (
         <nav className=' py-1 bg-zinc-800 flex items-center mx-auto fixed top-0 z-50 w-full px-10 h-14'>
