@@ -20,7 +20,9 @@ export default News
 
 export async function getStaticProps(context) {
     console.log('Running getStaticProps', context.previewData)
+
     const name = process.env.NAME
+
     console.log(name)
     return {
         props: {

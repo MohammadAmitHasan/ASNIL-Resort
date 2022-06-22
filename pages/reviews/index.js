@@ -10,13 +10,13 @@ const Reviews = ({ reviews }) => {
     const [user, setUser] = useState('')
 
     const fetchReviews = async () => {
-        const response = await fetch(`http://localhost:4000/reviews`)
+        const response = await fetch(`/api/reviews`)
         const data = await response.json()
         setAllReviews(data)
     }
 
     const submitReview = async () => {
-        const response = await fetch(`http://localhost:4000/reviews`, {
+        const response = await fetch(`/api/reviews`, {
             method: 'POST',
             body: JSON.stringify({ user, review }),
             headers: {
@@ -33,8 +33,6 @@ const Reviews = ({ reviews }) => {
     return <>
         <HomeLayout>
             <div>
-
-
 
                 <h1 className="text-center text-3xl md:text-5xl pt-10 font-semibold">Our Clients Reviews</h1>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
@@ -71,7 +69,7 @@ const Reviews = ({ reviews }) => {
 export default Reviews;
 
 export async function getServerSideProps() {
-    const response = await fetch(`http://localhost:4000/reviews`)
+    const response = await fetch(`http://localhost:3000/api/reviews`)
     const data = await response.json()
 
     return {
